@@ -1,130 +1,901 @@
-<section id="services" class="bg-[#0d1527] text-white py-24 px-6 relative overflow-hidden select-none">
-    <div class="vertical-text absolute right-4 top-1/2 -translate-y-1/2 text-slate-800 opacity-10 text-8xl md:text-[11rem] select-none uppercase tracking-[0.2em] pointer-events-none font-black">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideas Built to Stand Out | Ideaz & TERABIT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandRed: '#E12A2A',
+                        brandDark: '#111111',
+                        brandGray: '#F9F9F9'
+                    },
+                    fontFamily: {
+                        sans: ['Helvetica Neue', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth visual flow across sections */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom premium hero background blending with portrait dynamic styling */
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(225,42,42,0.96) 35%, rgba(20,20,50,0.55) 100%), 
+                        url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center 25%;
+            background-blend-mode: multiply;
+        }
+    </style>
+</head>
+<body class="bg-white text-brandDark antialiased font-sans selection:bg-brandRed selection:text-white">
+
+    <header class="p-4 font-sans select-none relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-white rounded-[32px] px-8 py-5 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-5">
+                <div class="flex items-center space-x-3">
+                    <div class="flex space-x-1.5 transform rotate-[20deg] mr-1">
+                        <div class="w-3.5 h-8 bg-[#1E293B] rounded-full"></div>
+                        <div class="w-3.5 h-8 bg-[#990a12] rounded-full"></div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-3xl font-black tracking-tight text-[#1E293B] leading-none">RATSCH</span>
+                        <span class="text-[9px] font-bold uppercase tracking-[0.22em] text-slate-400 mt-1">Creative & Media Group</span>
+                    </div>
+                </div>
+                <nav>
+                    <ul class="flex flex-wrap justify-center items-center gap-x-8 gap-y-2 text-xs font-black uppercase tracking-wider text-[#1E293B]">
+                        <li><a href="index.html" class="hover:text-[#990a12] transition-colors duration-200">Home</a></li>
+                        <li><a href="about.html" class="hover:text-[#990a12] transition-colors duration-200">About</a></li>
+                        <li><a href="services.html" class="text-[#990a12] border-b-2 border-[#990a12] pb-1">Services</a></li>
+                        <li><a href="portfolio.html" class="hover:text-[#990a12] transition-colors duration-200">Portfolio</a></li>
+                        <li><a href="contact.html" class="hover:text-[#990a12] transition-colors duration-200">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    /* Custom utility classes for premium visual treatments */
+    .text-stroke {
+        -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.4);
+    }
+    .vertical-text {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+    /* Hidden state for smooth entry acceleration animations */
+    .scroll-reveal {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+        transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .scroll-reveal.active {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+</style>
+
+<section id="services" class="bg-[#0b111e] text-white py-28 px-6 mt-8 relative overflow-hidden select-none">
+    
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-red-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute -bottom-40 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="vertical-text absolute right-2 top-1/2 -translate-y-1/2 text-[#121b2d] opacity-40 text-8xl md:text-[12rem] select-none uppercase tracking-[0.25em] pointer-events-none font-black transition-all duration-700">
         SERVICES
     </div>
 
-    <div class="max-w-6xl mx-auto relative z-10">
-        <div class="text-left mb-16">
-            <h2 class="text-4xl md:text-5xl font-black tracking-tight uppercase leading-none text-white">
+    <div class="max-w-7xl mx-auto relative z-10">
+        
+        <div class="text-left mb-20 scroll-reveal">
+            <span class="text-xs font-mono font-bold text-red-500 tracking-[0.3em] block mb-3 uppercase">// WHAT WE EXCEL AT</span>
+            <h2 class="text-4xl md:text-6xl font-black tracking-tight uppercase leading-[0.95] text-white">
                 OUR CORE<br>
-                <span class="text-transparent" style="-webkit-text-stroke: 1.5px rgba(255,255,255,0.6);">SERVICES</span>
+                <span class="text-transparent text-stroke tracking-wide">SERVICES</span>
             </h2>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            <div class="bg-[#131d35] rounded-2xl p-6 border border-slate-800/60 transition-all duration-300 flex flex-col justify-between min-h-[260px] text-left group relative overflow-hidden pb-8 parallax-card scroll-animate">
-                <div class="absolute bottom-0 left-0 w-full h-[3px] bg-red-600"></div>
+            <div class="bg-[#11192b]/60 hover:bg-[#141e33] rounded-2xl p-7 border border-slate-800/50 hover:border-slate-700/60 transition-all duration-500 flex flex-col justify-between min-h-[280px] text-left group relative overflow-hidden pb-10 scroll-reveal shadow-xl">
+                <div class="absolute bottom-0 left-0 w-full h-[4px] bg-red-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></div>
                 <div>
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="w-10 h-10 rounded-xl bg-red-950/30 border border-red-500/20 group-hover:bg-red-600 group-hover:border-red-600 flex items-center justify-center text-red-500 group-hover:text-white text-sm transition-all duration-300">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="w-12 h-12 rounded-xl bg-red-950/20 border border-red-500/20 group-hover:bg-red-600 group-hover:border-red-500 flex items-center justify-center text-red-500 group-hover:text-white text-base transition-all duration-300 transform group-hover:scale-110 group-hover:rotate-3">
                             <i class="fa-solid fa-code"></i>
                         </div>
-                        <span class="text-[11px] font-mono text-slate-500 font-bold group-hover:text-red-500 transition-colors duration-300">01</span>
+                        <span class="text-xs font-mono text-slate-600 font-bold group-hover:text-red-500 transition-colors duration-300">01</span>
                     </div>
-                    <h3 class="text-base font-black uppercase tracking-wider text-white mb-2">Web Development</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed font-light">Blazing-fast, pixel-perfect websites and web apps built with modern frameworks and clean architecture.</p>
+                    <h3 class="text-base font-bold uppercase tracking-wider text-white mb-3 group-hover:text-red-500 transition-colors duration-300">Web Development</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light group-hover:text-slate-300 transition-colors duration-300">Blazing-fast, pixel-perfect websites and web apps built with modern frameworks and clean architecture.</p>
                 </div>
             </div>
 
-            <div class="bg-[#131d35] rounded-2xl p-6 border border-slate-800/60 transition-all duration-300 flex flex-col justify-between min-h-[260px] text-left group relative overflow-hidden pb-8 parallax-card scroll-animate">
-                <div class="absolute bottom-0 left-0 w-full h-[3px] bg-red-600"></div>
+            <div class="bg-[#11192b]/60 hover:bg-[#141e33] rounded-2xl p-7 border border-slate-800/50 hover:border-slate-700/60 transition-all duration-500 flex flex-col justify-between min-h-[280px] text-left group relative overflow-hidden pb-10 scroll-reveal shadow-xl">
+                <div class="absolute bottom-0 left-0 w-full h-[4px] bg-red-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></div>
                 <div>
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="w-10 h-10 rounded-xl bg-red-950/30 border border-red-500/20 group-hover:bg-red-600 group-hover:border-red-600 flex items-center justify-center text-red-500 group-hover:text-white text-sm transition-all duration-300">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="w-12 h-12 rounded-xl bg-red-950/20 border border-red-500/20 group-hover:bg-red-600 group-hover:border-red-500 flex items-center justify-center text-red-500 group-hover:text-white text-base transition-all duration-300 transform group-hover:scale-110 group-hover:rotate-3">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
-                        <span class="text-[11px] font-mono text-slate-500 font-bold group-hover:text-red-500 transition-colors duration-300">02</span>
+                        <span class="text-xs font-mono text-slate-600 font-bold group-hover:text-red-500 transition-colors duration-300">02</span>
                     </div>
-                    <h3 class="text-base font-black uppercase tracking-wider text-white mb-2">SEO Optimization</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed font-light">Rank higher, convert more. Data-driven SEO strategies that put your brand in front of the right audience.</p>
+                    <h3 class="text-base font-bold uppercase tracking-wider text-white mb-3 group-hover:text-red-500 transition-colors duration-300">SEO Optimization</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light group-hover:text-slate-300 transition-colors duration-300">Rank higher, convert more. Data-driven SEO strategies that put your brand in front of the right audience.</p>
                 </div>
             </div>
 
-            <div class="bg-[#131d35] rounded-2xl p-6 border border-slate-800/60 transition-all duration-300 flex flex-col justify-between min-h-[260px] text-left group relative overflow-hidden pb-8 parallax-card scroll-animate">
-                <div class="absolute bottom-0 left-0 w-full h-[3px] bg-red-600"></div>
+            <div class="bg-[#11192b]/60 hover:bg-[#141e33] rounded-2xl p-7 border border-slate-800/50 hover:border-slate-700/60 transition-all duration-500 flex flex-col justify-between min-h-[280px] text-left group relative overflow-hidden pb-10 scroll-reveal shadow-xl">
+                <div class="absolute bottom-0 left-0 w-full h-[4px] bg-red-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></div>
                 <div>
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="w-10 h-10 rounded-xl bg-red-950/30 border border-red-500/20 group-hover:bg-red-600 group-hover:border-red-600 flex items-center justify-center text-red-500 group-hover:text-white text-sm transition-all duration-300">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="w-12 h-12 rounded-xl bg-red-950/20 border border-red-500/20 group-hover:bg-red-600 group-hover:border-red-500 flex items-center justify-center text-red-500 group-hover:text-white text-base transition-all duration-300 transform group-hover:scale-110 group-hover:rotate-3">
                             <i class="fa-solid fa-chart-line"></i>
                         </div>
-                        <span class="text-[11px] font-mono text-slate-500 font-bold group-hover:text-red-500 transition-colors duration-300">03</span>
+                        <span class="text-xs font-mono text-slate-600 font-bold group-hover:text-red-500 transition-colors duration-300">03</span>
                     </div>
-                    <h3 class="text-base font-black uppercase tracking-wider text-white mb-2">Digital Marketing</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed font-light">Multi-channel campaigns—PPC, email, content—that drive measurable growth and elevate brand visibility.</p>
+                    <h3 class="text-base font-bold uppercase tracking-wider text-white mb-3 group-hover:text-red-500 transition-colors duration-300">Digital Marketing</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light group-hover:text-slate-300 transition-colors duration-300">Multi-channel campaigns—PPC, email, content—that drive measurable growth and elevate brand visibility.</p>
                 </div>
             </div>
 
-            <div class="bg-[#131d35] rounded-2xl p-6 border border-slate-800/60 transition-all duration-300 flex flex-col justify-between min-h-[260px] text-left group relative overflow-hidden pb-8 parallax-card scroll-animate">
-                <div class="absolute bottom-0 left-0 w-full h-[3px] bg-red-600"></div>
+            <div class="bg-[#11192b]/60 hover:bg-[#141e33] rounded-2xl p-7 border border-slate-800/50 hover:border-slate-700/60 transition-all duration-500 flex flex-col justify-between min-h-[280px] text-left group relative overflow-hidden pb-10 scroll-reveal shadow-xl">
+                <div class="absolute bottom-0 left-0 w-full h-[4px] bg-red-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></div>
                 <div>
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="w-10 h-10 rounded-xl bg-red-950/30 border border-red-500/20 group-hover:bg-red-600 group-hover:border-red-600 flex items-center justify-center text-red-500 group-hover:text-white text-sm transition-all duration-300">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="w-12 h-12 rounded-xl bg-red-950/20 border border-red-500/20 group-hover:bg-red-600 group-hover:border-red-500 flex items-center justify-center text-red-500 group-hover:text-white text-base transition-all duration-300 transform group-hover:scale-110 group-hover:rotate-3">
                             <i class="fa-solid fa-mobile-screen"></i>
                         </div>
-                        <span class="text-[11px] font-mono text-slate-500 font-bold group-hover:text-red-500 transition-colors duration-300">04</span>
+                        <span class="text-xs font-mono text-slate-600 font-bold group-hover:text-red-500 transition-colors duration-300">04</span>
                     </div>
-                    <h3 class="text-base font-black uppercase tracking-wider text-white mb-2">App Development</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed font-light">Native and cross-platform mobile applications crafted for seamless user experience and robust performance.</p>
+                    <h3 class="text-base font-bold uppercase tracking-wider text-white mb-3 group-hover:text-red-500 transition-colors duration-300">App Development</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light group-hover:text-slate-300 transition-colors duration-300">Native and cross-platform mobile applications crafted for seamless user experience and robust performance.</p>
                 </div>
             </div>
 
-            <div class="bg-[#131d35] rounded-2xl p-6 border border-slate-800/60 transition-all duration-300 flex flex-col justify-between min-h-[260px] text-left group relative overflow-hidden pb-8 parallax-card scroll-animate">
-                <div class="absolute bottom-0 left-0 w-full h-[3px] bg-red-600"></div>
+            <div class="bg-[#11192b]/60 hover:bg-[#141e33] rounded-2xl p-7 border border-slate-800/50 hover:border-slate-700/60 transition-all duration-500 flex flex-col justify-between min-h-[280px] text-left group relative overflow-hidden pb-10 scroll-reveal shadow-xl">
+                <div class="absolute bottom-0 left-0 w-full h-[4px] bg-red-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></div>
                 <div>
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="w-10 h-10 rounded-xl bg-red-950/30 border border-red-500/20 group-hover:bg-red-600 group-hover:border-red-600 flex items-center justify-center text-red-500 group-hover:text-white text-sm transition-all duration-300">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="w-12 h-12 rounded-xl bg-red-950/20 border border-red-500/20 group-hover:bg-red-600 group-hover:border-red-500 flex items-center justify-center text-red-500 group-hover:text-white text-base transition-all duration-300 transform group-hover:scale-110 group-hover:rotate-3">
                             <i class="fa-solid fa-server"></i>
                         </div>
-                        <span class="text-[11px] font-mono text-slate-500 font-bold group-hover:text-red-500 transition-colors duration-300">05</span>
+                        <span class="text-xs font-mono text-slate-600 font-bold group-hover:text-red-500 transition-colors duration-300">05</span>
                     </div>
-                    <h3 class="text-base font-black uppercase tracking-wider text-white mb-2">Website Hosting</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed font-light">Enterprise-grade hosting with 99.9% uptime, SSL, CDN, and proactive support—so your site never sleeps.</p>
+                    <h3 class="text-base font-bold uppercase tracking-wider text-white mb-3 group-hover:text-red-500 transition-colors duration-300">Website Hosting</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light group-hover:text-slate-300 transition-colors duration-300">Enterprise-grade hosting with 99.9% uptime, SSL, CDN, and proactive support—so your site never sleeps.</p>
                 </div>
             </div>
 
-            <div class="bg-[#131d35] rounded-2xl p-6 border border-slate-800/60 transition-all duration-300 flex flex-col justify-between min-h-[260px] text-left group relative overflow-hidden pb-8 parallax-card scroll-animate">
-                <div class="absolute bottom-0 left-0 w-full h-[3px] bg-red-600"></div>
+            <div class="bg-[#11192b]/60 hover:bg-[#141e33] rounded-2xl p-7 border border-slate-800/50 hover:border-slate-700/60 transition-all duration-500 flex flex-col justify-between min-h-[280px] text-left group relative overflow-hidden pb-10 scroll-reveal shadow-xl">
+                <div class="absolute bottom-0 left-0 w-full h-[4px] bg-red-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></div>
                 <div>
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="w-10 h-10 rounded-xl bg-red-950/30 border border-red-500/20 group-hover:bg-red-600 group-hover:border-red-600 flex items-center justify-center text-red-500 group-hover:text-white text-sm transition-all duration-300">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="w-12 h-12 rounded-xl bg-red-950/20 border border-red-500/20 group-hover:bg-red-600 group-hover:border-red-500 flex items-center justify-center text-red-500 group-hover:text-white text-base transition-all duration-300 transform group-hover:scale-110 group-hover:rotate-3">
                             <i class="fa-solid fa-house-laptop"></i>
                         </div>
-                        <span class="text-[11px] font-mono text-slate-500 font-bold group-hover:text-red-500 transition-colors duration-300">06</span>
+                        <span class="text-xs font-mono text-slate-600 font-bold group-hover:text-red-500 transition-colors duration-300">06</span>
                     </div>
-                    <h3 class="text-base font-black uppercase tracking-wider text-white mb-2">Website Rental</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed font-light">Get a premium professional website without upfront costs. Flexible subscription plans with full management included.</p>
+                    <h3 class="text-base font-bold uppercase tracking-wider text-white mb-3 group-hover:text-red-500 transition-colors duration-300">Website Rental</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light group-hover:text-slate-300 transition-colors duration-300">Get a premium professional website without upfront costs. Flexible subscription plans with full management included.</p>
                 </div>
             </div>
 
-            <div class="bg-[#131d35] rounded-2xl p-6 border border-slate-800/60 transition-all duration-300 flex flex-col justify-between min-h-[260px] text-left group relative overflow-hidden pb-8">
-                <div class="absolute bottom-0 left-0 w-full h-[3px] bg-red-600"></div>
+            <div class="bg-[#11192b]/60 hover:bg-[#141e33] rounded-2xl p-7 border border-slate-800/50 hover:border-slate-700/60 transition-all duration-500 flex flex-col justify-between min-h-[280px] text-left group relative overflow-hidden pb-10 scroll-reveal shadow-xl">
+                <div class="absolute bottom-0 left-0 w-full h-[4px] bg-red-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></div>
                 <div>
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="w-10 h-10 rounded-xl bg-red-950/30 border border-red-500/20 group-hover:bg-red-600 group-hover:border-red-600 flex items-center justify-center text-red-500 group-hover:text-white text-sm transition-all duration-300">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="w-12 h-12 rounded-xl bg-red-950/20 border border-red-500/20 group-hover:bg-red-600 group-hover:border-red-500 flex items-center justify-center text-red-500 group-hover:text-white text-base transition-all duration-300 transform group-hover:scale-110 group-hover:rotate-3">
                             <i class="fa-solid fa-bezier-curve"></i>
                         </div>
-                        <span class="text-[11px] font-mono text-slate-500 font-bold group-hover:text-red-500 transition-colors duration-300">07</span>
+                        <span class="text-xs font-mono text-slate-600 font-bold group-hover:text-red-500 transition-colors duration-300">07</span>
                     </div>
-                    <h3 class="text-base font-black uppercase tracking-wider text-white mb-2">Logo Design</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed font-light">Distinctive brand marks and full visual identity systems that communicate your values at a glance.</p>
+                    <h3 class="text-base font-bold uppercase tracking-wider text-white mb-3 group-hover:text-red-500 transition-colors duration-300">Logo Design</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light group-hover:text-slate-300 transition-colors duration-300">Distinctive brand marks and full visual identity systems that communicate your values at a glance.</p>
                 </div>
             </div>
 
-            <div class="bg-[#131d35] rounded-2xl p-6 border border-slate-800/60 transition-all duration-300 flex flex-col justify-between min-h-[260px] text-left group relative overflow-hidden pb-8">
-                <div class="absolute bottom-0 left-0 w-full h-[3px] bg-red-600"></div>
+            <div class="bg-[#11192b]/60 hover:bg-[#141e33] rounded-2xl p-7 border border-slate-800/50 hover:border-slate-700/60 transition-all duration-500 flex flex-col justify-between min-h-[280px] text-left group relative overflow-hidden pb-10 scroll-reveal shadow-xl">
+                <div class="absolute bottom-0 left-0 w-full h-[4px] bg-red-600 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></div>
                 <div>
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="w-10 h-10 rounded-xl bg-red-950/30 border border-red-500/20 group-hover:bg-red-600 group-hover:border-red-600 flex items-center justify-center text-red-500 group-hover:text-white text-sm transition-all duration-300">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="w-12 h-12 rounded-xl bg-red-950/20 border border-red-500/20 group-hover:bg-red-600 group-hover:border-red-500 flex items-center justify-center text-red-500 group-hover:text-white text-base transition-all duration-300 transform group-hover:scale-110 group-hover:rotate-3">
                             <i class="fa-brands fa-share-nodes"></i>
                         </div>
-                        <span class="text-[11px] font-mono text-slate-500 font-bold group-hover:text-red-500 transition-colors duration-300">08</span>
+                        <span class="text-xs font-mono text-slate-600 font-bold group-hover:text-red-500 transition-colors duration-300">08</span>
                     </div>
-                    <h3 class="text-base font-black uppercase tracking-wider text-white mb-2">Social Media</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed font-light">Content strategy, scheduling, community management, and paid social—building audiences that convert.</p>
+                    <h3 class="text-base font-bold uppercase tracking-wider text-white mb-3 group-hover:text-red-500 transition-colors duration-300">Social Media</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light group-hover:text-slate-300 transition-colors duration-300">Content strategy, scheduling, community management, and paid social—building audiences that convert.</p>
                 </div>
             </div>
 
         </div>
     </div>
 </section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const revealElements = document.querySelectorAll('.scroll-reveal');
+        
+        const observerOptions = {
+            root: null,
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Introduce a subtle layout cascade stagger trigger delay
+                    setTimeout(() => {
+                        entry.target.classList.add('active');
+                    }, index * 70); 
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        revealElements.forEach(element => {
+            revealObserver.observe(element);
+        });
+    });
+</script>
+
+
+
+
+
+
+<style>
+    /* Premium text stroke style for elegant section numbering or backdrops */
+    .text-stroke-dark {
+        -webkit-text-stroke: 1px rgba(17, 17, 17, 0.15);
+    }
+    /* Hidden scroll state class */
+    .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(2rem);
+        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-on-scroll.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+
+<style>
+    /* Premium micro-animations for meta counters */
+    .metric-border-grow {
+        position: relative;
+    }
+    .metric-border-grow::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background-color: #E2E8F0; /* default tailwind slate-200 */
+        transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .metric-border-grow::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2px;
+        height: 0%;
+        background-color: #E12A2A; /* brandRed */
+        transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .group:hover.metric-border-grow::after {
+        height: 100%;
+    }
+    .group:hover.metric-border-grow::before {
+        background-color: transparent;
+    }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+    /* Premium modern font styling tokens */
+    .font-editorial {
+        font-family: 'Playfair Display', Georgia, serif;
+    }
+    .font-interface {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Interactive expanding border mechanics */
+    .metric-border-grow {
+        position: relative;
+    }
+    .metric-border-grow::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background-color: #E2E8F0;
+        transition: background-color 0.4s ease;
+    }
+    .metric-border-grow::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1px;
+        height: 0%;
+        background-color: #E12A2A; /* brandRed */
+        transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .group:hover.metric-border-grow::after {
+        height: 100%;
+    }
+
+    /* Scroll animations with masking clip paths */
+    .reveal-frame {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-frame.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Clean background grid linear flow animation */
+    @keyframes lineFlow {
+        0% { transform: translateY(-100%); }
+        100% { transform: translateY(100%); }
+    }
+    .bg-grid-line::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 30%;
+        background: linear-gradient(to bottom, transparent, rgba(225, 42, 42, 0.15), transparent);
+        animation: lineFlow 8s infinite linear;
+    }
+</style>
+
+<section class="bg-brandGray py-28 px-6 md:px-12 border-b border-gray-100 relative overflow-hidden font-interface">
+    
+    <div class="absolute inset-0 opacity-[0.04] pointer-events-none select-none mix-blend-multiply">
+        <div class="absolute top-0 left-1/4 w-[1px] h-full bg-brandDark bg-grid-line overflow-hidden"></div>
+        <div class="absolute top-0 left-2/3 w-[1px] h-full bg-brandDark bg-grid-line overflow-hidden" style="animation-delay: 4s;"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start relative z-10 reveal-frame">
+        
+        <div class="lg:col-span-7 space-y-8">
+            <div class="flex items-center space-x-4">
+                <span class="w-10 h-[1px] bg-brandRed block transform origin-left scale-x-100 transition-transform duration-700"></span>
+                <span class="text-[10px] font-mono font-bold text-brandRed tracking-[0.35em] uppercase block">// CASE STUDY OVERVIEW</span>
+            </div>
+            
+            <h3 class="text-3xl sm:text-4xl lg:text-5xl text-brandDark tracking-tight leading-[1.15] max-w-3xl font-editorial font-semibold">
+                Refining the product framework for an <span class="italic font-normal text-gray-700">intuitive</span> wellness ecosystem.
+            </h3>
+            
+            <p class="text-gray-600 leading-relaxed text-base font-light max-w-2xl">
+                Lifeflow approached <span class="font-bold text-brandDark relative inline-block after:absolute after:bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-brandRed/20">Ideaz</span> to refine their app experience, reduce user friction, and increase daily engagement. Our goal was to simplify journeys, clarify content, and align the interface with a clean, modern visual language that matched their wellness-focused brand.
+            </p>
+        </div>
+        
+        <div class="lg:col-span-5 grid grid-cols-1 gap-8 lg:pl-16 w-full lg:mt-16">
+            
+            <div class="group metric-border-grow pl-6 py-1.5 transition-all duration-300 transform hover:translate-x-2 cursor-default">
+                <span class="text-[9px] text-gray-400 block font-mono tracking-[0.25em] font-bold mb-1 transition-colors group-hover:text-brandRed">01 / CLIENT</span>
+                <span class="font-bold text-base text-brandDark tracking-tight transition-colors group-hover:text-black block">
+                    Lifeflow — Lifestyle & Wellness App
+                </span>
+            </div>
+            
+            <div class="group metric-border-grow pl-6 py-1.5 transition-all duration-300 transform hover:translate-x-2 cursor-default">
+                <span class="text-[9px] text-gray-400 block font-mono tracking-[0.25em] font-bold mb-1 transition-colors group-hover:text-brandRed">02 / CORE SERVICES</span>
+                <span class="font-bold text-base text-brandDark tracking-tight transition-colors group-hover:text-black block">
+                    UI/UX Design, Creative Strategy
+                </span>
+            </div>
+            
+            <div class="group metric-border-grow pl-6 py-1.5 transition-all duration-300 transform hover:translate-x-2 cursor-default">
+                <span class="text-[9px] text-gray-400 block font-mono tracking-[0.25em] font-bold mb-1 transition-colors group-hover:text-brandRed">03 / TIMELINE RELEASE</span>
+                <span class="font-bold text-base text-brandDark tracking-tight font-mono transition-colors group-hover:text-black block">
+                    2035
+                </span>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const frameRevealTarget = document.querySelector('.reveal-frame');
+        
+        const frameObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    frameObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.05
+        });
+
+        if(frameRevealTarget) frameObserver.observe(frameRevealTarget);
+    });
+</script>
+
+   <style>
+    /* Premium horizontal connecting line animation */
+    .process-grid-container {
+        position: relative;
+    }
+    
+    /* Reveal structural animation classes */
+    .process-card-reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .process-card-reveal.is-animated {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Interactive expanding border mechanics */
+    .animated-top-border {
+        position: relative;
+    }
+    .animated-top-border::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #1F2937; /* Gray-800 */
+        transition: background-color 0.4s ease;
+    }
+    .animated-top-border::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 0;
+        height: 1px;
+        background-color: #E12A2A; /* brandRed */
+        transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .group:hover.animated-top-border::after {
+        width: 100%;
+        left: 0;
+    }
+</style>
+
+<section id="process" class="bg-brandDark text-white py-28 px-6 md:py-36 md:px-12 relative overflow-hidden">
+    
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brandRed/[0.02] rounded-full blur-[160px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+        
+        <div class="flex items-center space-x-3 mb-20 process-card-reveal">
+            <span class="w-6 h-[1px] bg-brandRed"></span>
+            <div class="text-xs font-mono font-black tracking-[0.25em] text-brandRed uppercase">// OUR WORKING PROCESS</div>
+        </div>
+        
+        <div class="process-grid-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-16">
+            
+            <div class="animated-top-border pt-8 group transition-all duration-300 process-card-reveal">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-[11px] font-mono text-brandRed font-black tracking-widest block">01 / DISCOVERY & AUDIT</span>
+                    <span class="text-xs font-mono text-gray-700 group-hover:text-brandRed/40 transition-colors duration-300">[STAGE_01]</span>
+                </div>
+                <h3 class="text-2xl font-bold tracking-tight mb-3 text-white group-hover:text-brandRed transition-colors duration-300">Discovery & Strategy</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed mb-6">We begin by defining precisely what the website framework must achieve metrics-wise.</p>
+                
+                <ul class="text-xs text-gray-400 space-y-3 list-none font-light border-l border-gray-800 pl-4 group-hover:border-brandRed/30 transition-colors duration-300">
+                    <li class="hover:text-white transition-colors flex items-center"><span class="w-1 h-1 bg-brandRed mr-2 rounded-full"></span>Business goals and metrics</li>
+                    <li class="hover:text-white transition-colors flex items-center"><span class="w-1 h-1 bg-brandRed mr-2 rounded-full"></span>Target audience behavior</li>
+                    <li class="hover:text-white transition-colors flex items-center"><span class="w-1 h-1 bg-brandRed mr-2 rounded-full"></span>Sitemap & prioritization</li>
+                    <li class="hover:text-white transition-colors flex items-center"><span class="w-1 h-1 bg-brandRed mr-2 rounded-full"></span>Content & CTA strategy</li>
+                    <li class="hover:text-white transition-colors flex items-center"><span class="w-1 h-1 bg-brandRed mr-2 rounded-full"></span>Technical considerations</li>
+                </ul>
+                
+                <div class="mt-8 inline-flex items-center bg-white/[0.02] group-hover:bg-brandRed/[0.06] border border-white/10 group-hover:border-brandRed/20 px-3 py-1.5 text-[9px] font-mono text-brandRed rounded-sm uppercase tracking-widest transition-all duration-300">
+                    <span class="w-1.5 h-1.5 bg-brandRed rounded-full mr-2 animate-pulse"></span>
+                    Milestone: Strategy Approved
+                </div>
+            </div>
+
+            <div class="animated-top-border pt-8 group transition-all duration-300 process-card-reveal">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-[11px] font-mono text-brandRed font-black tracking-widest block">02 / INTERACTION ARCHITECTURE</span>
+                    <span class="text-xs font-mono text-gray-700 group-hover:text-brandRed/40 transition-colors duration-300">[STAGE_02]</span>
+                </div>
+                <h3 class="text-2xl font-bold tracking-tight mb-3 text-white group-hover:text-brandRed transition-colors duration-300">UX & UI Design</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed mb-6">We translate data insights into an elegant, scalable visual design system.</p>
+                
+                <ul class="text-xs text-gray-400 space-y-3 list-none font-light border-l border-gray-800 pl-4 group-hover:border-brandRed/30 transition-colors duration-300">
+                    <li class="hover:text-white transition-colors flex items-center"><span class="w-1 h-1 bg-brandRed mr-2 rounded-full"></span>Page-level wireframes</li>
+                    <li class="hover:text-white transition-colors flex items-center"><span class="w-1 h-1 bg-brandRed mr-2 rounded-full"></span>High-fidelity UI layout</li>
+                    <li class="hover:text-white transition-colors flex items-center"><span class="w-1 h-1 bg-brandRed mr-2 rounded-full"></span>Typography & space rules</li>
+                    <li class="hover:text-white transition-colors flex items-center"><span class="w-1 h-1 bg-brandRed mr-2 rounded-full"></span>Visual hierarchy rhythm</li>
+                    <li class="hover:text-white transition-colors flex items-center"><span class="w-1 h-1 bg-brandRed mr-2 rounded-full"></span>Interaction & motion guide</li>
+                </ul>
+                
+                <div class="mt-8 inline-flex items-center bg-white/[0.02] group-hover:bg-brandRed/[0.06] border border-white/10 group-hover:border-brandRed/20 px-3 py-1.5 text-[9px] font-mono text-brandRed rounded-sm uppercase tracking-widest transition-all duration-300">
+                    <span class="w-1.5 h-1.5 bg-brandRed rounded-full mr-2 animate-pulse"></span>
+                    Milestone: Website UI Approved
+                </div>
+            </div>
+
+            <div class="animated-top-border pt-8 group transition-all duration-300 process-card-reveal">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-[11px] font-mono text-brandRed font-black tracking-widest block">03 / CODE & PERFORMANCE</span>
+                    <span class="text-xs font-mono text-gray-700 group-hover:text-brandRed/40 transition-colors duration-300">[STAGE_03]</span>
+                </div>
+                <h3 class="text-2xl font-bold tracking-tight mb-3 text-white group-hover:text-brandRed transition-colors duration-300">Frontend Development</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed mb-6">We convert designs perfectly into component-driven, production-ready code.</p>
+                
+                <ul class="text-xs text-gray-400 space-y-3 list-none font-light border-l border-gray-800 pl-4 group-hover:border-brandRed/30 transition-colors duration-300">
+                    <li class="hover:text-white transition-colors flex items-center"><span class="w-1 h-1 bg-brandRed mr-2 rounded-full"></span>Component architecture</li>
+                    <li class="hover:text-white transition-colors flex items-center"><span class="w-1 h-1 bg-brandRed mr-2 rounded-full"></span>Responsive system engine</li>
+                    <li class="hover:text-white transition-colors flex items-center"><span class="w-1 h-1 bg-brandRed mr-2 rounded-full"></span>Loading & size optimization</li>
+                    <li class="hover:text-white transition-colors flex items-center"><span class="w-1 h-1 bg-brandRed mr-2 rounded-full"></span>Accessibility frameworks</li>
+                    <li class="hover:text-white transition-colors flex items-center"><span class="w-1 h-1 bg-brandRed mr-2 rounded-full"></span>SEO-friendly construction</li>
+                </ul>
+                
+                <div class="mt-8 inline-flex items-center bg-white/[0.02] group-hover:bg-brandRed/[0.06] border border-white/10 group-hover:border-brandRed/20 px-3 py-1.5 text-[9px] font-mono text-brandRed rounded-sm uppercase tracking-widest transition-all duration-300">
+                    <span class="w-1.5 h-1.5 bg-brandRed rounded-full mr-2 animate-pulse"></span>
+                    Milestone: Ready on Staging
+                </div>
+            </div>
+
+            <div class="animated-top-border pt-8 group transition-all duration-300 process-card-reveal">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-[11px] font-mono text-brandRed font-black tracking-widest block">04 / INTEGRITY ASSURANCE</span>
+                    <span class="text-xs font-mono text-gray-700 group-hover:text-brandRed/40 transition-colors duration-300">[STAGE_04]</span>
+                </div>
+                <h3 class="text-2xl font-bold tracking-tight mb-3 text-white group-hover:text-brandRed transition-colors duration-300">QA, Launch & Handover</h3>
+                <p class="text-gray-400 text-xs font-light leading-relaxed mb-6">Before deployment, we thoroughly audit systems to make sure everything performs perfectly.</p>
+                
+                <ul class="text-xs text-gray-400 space-y-3 list-none font-light border-l border-gray-800 pl-4 group-hover:border-brandRed/30 transition-colors duration-300">
+                    <li class="hover:text-white transition-colors flex items-center"><span class="w-1 h-1 bg-brandRed mr-2 rounded-full"></span>Cross-browser testing matrices</li>
+                    <li class="hover:text-white transition-colors flex items-center"><span class="w-1 h-1 bg-brandRed mr-2 rounded-full"></span>Refinements and final polish</li>
+                    <li class="hover:text-white transition-colors flex items-center"><span class="w-1 h-1 bg-brandRed mr-2 rounded-full"></span>Production deployment support</li>
+                    <li class="hover:text-white transition-colors flex items-center"><span class="w-1 h-1 bg-brandRed mr-2 rounded-full"></span>Documentation & handoff</li>
+                </ul>
+                
+                <div class="mt-8 inline-flex items-center bg-white/[0.02] group-hover:bg-brandRed/[0.06] border border-white/10 group-hover:border-brandRed/20 px-3 py-1.5 text-[9px] font-mono text-brandRed rounded-sm uppercase tracking-widest transition-all duration-300">
+                    <span class="w-1.5 h-1.5 bg-brandRed rounded-full mr-2 animate-pulse"></span>
+                    Milestone: Website Live
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const targetProcessCards = document.querySelectorAll('.process-card-reveal');
+        
+        const processObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Stagger items incrementally on viewport entrance
+                    const cardsArray = Array.from(targetProcessCards);
+                    const currentElementIndex = cardsArray.indexOf(entry.target);
+                    
+                    setTimeout(() => {
+                        entry.target.classList.add('is-animated');
+                    }, currentElementIndex * 120);
+                    
+                    processObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.05,
+            rootMargin: "0px 0px -20px 0px"
+        });
+
+        targetProcessCards.forEach(card => processObserver.observe(card));
+    });
+</script>
+
+    <style>
+    /* Global scroll reveal mechanics */
+    .stack-reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .stack-reveal.is-revealed {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    /* Clean micro-interaction for sub-items */
+    .tool-group {
+        position: relative;
+        padding-left: 0;
+        transition: padding 0.3s ease;
+    }
+    .tool-group:hover {
+        padding-left: 6px;
+    }
+</style>
+
+<section id="stack" class="py-24 px-6 md:py-32 md:px-12 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-start border-b border-gray-100 overflow-hidden">
+    
+    <div class="space-y-8 stack-reveal">
+        <div class="flex items-center space-x-3">
+            <span class="w-4 h-[1px] bg-brandRed"></span>
+            <h4 class="text-xs font-mono text-brandRed tracking-[0.2em] uppercase font-black">// TOOLS & TECHNOLOGIES</h4>
+        </div>
+        <div class="space-y-6">
+            <div class="tool-group border-l border-transparent hover:border-brandRed/30 pl-0">
+                <h5 class="text-[10px] font-bold text-gray-400 font-mono tracking-widest mb-1">DESIGN & COLLABORATION</h5>
+                <p class="text-base text-brandDark font-semibold transition-colors duration-200 hover:text-brandRed">Figma, FigJam</p>
+            </div>
+            <div class="tool-group border-l border-transparent hover:border-brandRed/30 pl-0">
+                <h5 class="text-[10px] font-bold text-gray-400 font-mono tracking-widest mb-1">FRONTEND & CMS OPTIONS</h5>
+                <p class="text-base text-brandDark font-semibold transition-colors duration-200 hover:text-brandRed">React, Next.js, Webflow</p>
+            </div>
+            <div class="tool-group border-l border-transparent hover:border-brandRed/30 pl-0">
+                <h5 class="text-[10px] font-bold text-gray-400 font-mono tracking-widest mb-1">PERFORMANCE & QUALITY</h5>
+                <p class="text-base text-brandDark font-semibold transition-colors duration-200 hover:text-brandRed">Lighthouse, Modern frontend tooling, CI/CD workflows</p>
+            </div>
+            <div class="tool-group border-l border-transparent hover:border-brandRed/30 pl-0">
+                <h5 class="text-[10px] font-bold text-gray-400 font-mono tracking-widest mb-1">PROJECT MANAGEMENT</h5>
+                <p class="text-base text-brandDark font-semibold transition-colors duration-200 hover:text-brandRed">Jira / Notion / Trello, GitHub / GitLab</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="space-y-6 bg-brandGray/50 hover:bg-brandGray p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-500 transform hover:-translate-y-1.5 stack-reveal">
+        <div class="flex items-center space-x-3">
+            <span class="w-4 h-[1px] bg-brandRed"></span>
+            <h4 class="text-xs font-mono text-brandRed tracking-[0.2em] uppercase font-black">// DELIVERABLES</h4>
+        </div>
+        <ul class="space-y-4 text-sm text-gray-700 font-light">
+            <li class="flex items-start group/item">
+                <span class="text-brandRed mr-3 transform transition-transform duration-300 group-hover/item:scale-125 group-hover/item:rotate-12">
+                    <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </span> 
+                <span class="transition-colors group-hover/item:text-brandDark">Fully responsive, production-ready website</span>
+            </li>
+            <li class="flex items-start group/item">
+                <span class="text-brandRed mr-3 transform transition-transform duration-300 group-hover/item:scale-125 group-hover/item:rotate-12">
+                    <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </span> 
+                <span class="transition-colors group-hover/item:text-brandDark">High-quality UX/UI design files</span>
+            </li>
+            <li class="flex items-start group/item">
+                <span class="text-brandRed mr-3 transform transition-transform duration-300 group-hover/item:scale-125 group-hover/item:rotate-12">
+                    <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </span> 
+                <span class="transition-colors group-hover/item:text-brandDark">Frontend source code or Webflow project</span>
+            </li>
+            <li class="flex items-start group/item">
+                <span class="text-brandRed mr-3 transform transition-transform duration-300 group-hover/item:scale-125 group-hover/item:rotate-12">
+                    <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </span> 
+                <span class="transition-colors group-hover/item:text-brandDark">Performance-optimized build</span>
+            </li>
+            <li class="flex items-start group/item">
+                <span class="text-brandRed mr-3 transform transition-transform duration-300 group-hover/item:scale-125 group-hover/item:rotate-12">
+                    <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </span> 
+                <span class="transition-colors group-hover/item:text-brandDark">Deployment support & core infrastructure setup</span>
+            </li>
+            <li class="flex items-start group/item">
+                <span class="text-brandRed mr-3 transform transition-transform duration-300 group-hover/item:scale-125 group-hover/item:rotate-12">
+                    <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </span> 
+                <span class="transition-colors group-hover/item:text-brandDark">Documentation for future structural updates</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="space-y-8 stack-reveal">
+        <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+                <span class="w-4 h-[1px] bg-brandRed"></span>
+                <h4 class="text-xs font-mono text-brandRed tracking-[0.2em] uppercase font-black">// WHAT "DONE" LOOKS LIKE</h4>
+            </div>
+            <p class="text-sm text-gray-600 leading-relaxed font-light italic bg-gray-50/60 p-4 border-l-2 border-brandRed/40 rounded-r-sm">
+                "A professionally designed and engineered website that communicates your value clearly, feels modern and trustworthy, performs fast across devices, supports conversion and growth, and can evolve without rework."
+            </p>
+        </div>
+        
+        <hr class="border-gray-200">
+        
+        <div class="space-y-4">
+            <h4 class="text-xs font-mono text-brandDark tracking-[0.15em] uppercase font-bold relative inline-block after:absolute after:-bottom-1 after:left-0 after:w-1/3 after:h-[1px] after:bg-brandDark/40">
+                HOW THIS FITS INTO TERABIT IT SERVICES
+            </h4>
+            <p class="text-xs text-gray-500 leading-relaxed font-light">
+                This service often complements broader digital initiatives, including Brand Strategy & Visual Systems, comprehensive Product Design frameworks, and Startup MVP Design & Development. Clients can start with a targeted optimization website and smoothly scale execution parameters into long-term product engineering partnerships.
+            </p>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const stackTargetElements = document.querySelectorAll('.stack-reveal');
+        
+        const stackObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const elementsArray = Array.from(stackTargetElements);
+                    const matchedIndex = elementsArray.indexOf(entry.target);
+                    
+                    // Controlled incremental grid cascade delay sequencing
+                    setTimeout(() => {
+                        entry.target.classList.add('is-revealed');
+                    }, matchedIndex * 140);
+                    
+                    stackObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.05,
+            rootMargin: "0px 0px -30px 0px"
+        });
+
+        stackTargetElements.forEach(item => stackObserver.observe(item));
+    });
+</script>
+  
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const links = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Animate hamburger to an 'X' shape implicitly or change state color
+            menuBtn.classList.toggle('text-brandDark');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuBtn.classList.remove('text-brandDark');
+            });
+        });
+    </script>
+
+
+<footer class="bg-[#8B0000] text-white pt-16 pb-24 px-6 md:px-12 font-sans relative overflow-hidden select-none" style="border-radius: 0 0 45px 45px;">
+        
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-black/20 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 pb-12 border-b border-white/10">
+                
+                <div class="sm:col-span-2 lg:col-span-2 space-y-5">
+                    <div class="leading-none">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <div class="flex space-x-1 transform rotate-[20deg]">
+                                <div class="w-2.5 h-6 bg-white rounded-full"></div>
+                                <div class="w-2.5 h-6 bg-amber-400 rounded-full"></div>
+                            </div>
+                            <span class="text-3xl font-black tracking-tight text-white block">
+                                RATSCH
+                            </span>
+                        </div>
+                        <div class="text-[10px] font-black uppercase tracking-[0.22em] text-amber-400/90">Creative & Media Group</div>
+                    </div>
+                    
+                    <p class="text-sm text-red-100/80 leading-relaxed max-w-sm font-light">
+                        A full-service digital agency crafting premium web experiences, apps, and brand identities for ambitious businesses across Asia and beyond.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <a href="#" class="w-9 h-9 bg-white/10 border border-white/10 rounded-xl flex items-center justify-center text-white hover:bg-white hover:text-[#8B0000] transition-all duration-300 transform hover:-translate-y-0.5 shadow-md" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/10 border border-white/10 rounded-xl flex items-center justify-center text-white hover:bg-white hover:text-[#8B0000] transition-all duration-300 transform hover:-translate-y-0.5 shadow-md" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/10 border border-white/10 rounded-xl flex items-center justify-center text-white hover:bg-white hover:text-[#8B0000] transition-all duration-300 transform hover:-translate-y-0.5 shadow-md" aria-label="Twitter X">
+                            <i class="fa-brands fa-x-twitter text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/10 border border-white/10 rounded-xl flex items-center justify-center text-white hover:bg-white hover:text-[#8B0000] transition-all duration-300 transform hover:-translate-y-0.5 shadow-md" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-amber-400 font-black text-xs tracking-widest uppercase border-b border-white/10 pb-2">Services</h4>
+                    <ul class="space-y-3 text-xs font-semibold text-red-50">
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Web Development</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">SEO Optimization</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Digital Marketing</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">App Development</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Website Hosting</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-amber-400 font-black text-xs tracking-widest uppercase border-b border-white/10 pb-2">Company</h4>
+                    <ul class="space-y-3 text-xs font-semibold text-red-50">
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">About Us</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Our Work</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-amber-400 font-black text-xs tracking-widest uppercase border-b border-white/10 pb-2">Legal</h4>
+                    <ul class="space-y-3 text-xs font-semibold text-red-50">
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Cookie Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-amber-400 font-black text-xs tracking-widest uppercase border-b border-white/10 pb-2">Contact</h4>
+                    <ul class="space-y-3 text-xs font-semibold text-red-100/90">
+                        <li><a href="tel:+11234567890" class="hover:text-white transition-colors duration-200 block py-0.5">+1 (123) 456-7890</a></li>
+                        <li><a href="mailto:hello@ratsch.co" class="hover:text-white transition-colors duration-200 block py-0.5">hello@ratsch.co</a></li>
+                        <li><span class="block py-0.5 leading-relaxed">123 Example Street, City, Country</span></li>
+                        <li><span class="text-red-200/60 block py-0.5">Mon–Fri: 9am – 6pm</span></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] tracking-wider font-semibold text-red-200/70">
+                <div class="text-center md:text-left">
+                    &copy; 2026 <span class="text-white font-bold">RATSCH Creative & Media Group</span>. All rights reserved.
+                </div>
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 uppercase text-[10px] tracking-widest text-red-200/80">
+                    <a href="#" class="hover:text-white transition-colors duration-200">Linkedin</a>
+                    <a href="#" class="hover:text-white transition-colors duration-200">Instagram</a>
+                    <a href="#" class="hover:text-white transition-colors duration-200">Twitter</a>
+                    <a href="#" class="hover:text-white transition-colors duration-200">Youtube</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

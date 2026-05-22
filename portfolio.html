@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RATSCH - Premium Creative & Media Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        
+        /* Smooth Entrance Animations */
+        .scroll-animate { 
+            opacity: 0; 
+            transform: translateY(30px) scale(0.98); 
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); 
+        }
+        .scroll-animate.visible { 
+            opacity: 1; 
+            transform: translateY(0) scale(1); 
+        }
+
+        /* Custom text stroke effect for structural titles */
+        .text-stroke {
+            -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-[#09090b] text-white overflow-x-hidden">
+
+
+    <header class="p-4 font-sans select-none relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-white rounded-[32px] px-8 py-5 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-5">
+                <div class="flex items-center space-x-3">
+                    <div class="flex space-x-1.5 transform rotate-[20deg] mr-1">
+                        <div class="w-3.5 h-8 bg-[#1E293B] rounded-full"></div>
+                        <div class="w-3.5 h-8 bg-[#990a12] rounded-full"></div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-3xl font-black tracking-tight text-[#1E293B] leading-none">RATSCH</span>
+                        <span class="text-[9px] font-bold uppercase tracking-[0.22em] text-slate-400 mt-1">Creative & Media Group</span>
+                    </div>
+                </div>
+                <nav>
+                    <ul class="flex flex-wrap justify-center items-center gap-x-8 gap-y-2 text-xs font-black uppercase tracking-wider text-[#1E293B]">
+                        <li><a href="index.html" class="hover:text-[#990a12] transition-colors duration-200">Home</a></li>
+                        <li><a href="about.html" class="hover:text-[#990a12] transition-colors duration-200">About</a></li>
+                        <li><a href="services.html" class="hover:text-[#990a12] transition-colors duration-200">Services</a></li>
+                        <li><a href="portfolio.html" class="text-[#990a12] border-b-2 border-[#990a12] pb-1">Portfolio</a></li>
+                        <li><a href="contact.html" class="hover:text-[#990a12] transition-colors duration-200">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header> 
+
+    <!-- 1. PORTFOLIO SECTION -->
+    <section id="portfolio" class="bg-[#09090b] text-white py-20 pb-16 px-6 relative overflow-hidden border-t border-zinc-800/40 select-none">
+        <!-- Ambient Background Glows -->
+        <div class="absolute top-12 left-1/4 w-96 h-96 bg-red-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-12 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto relative z-10">
+            <!-- Header -->
+            <div class="text-left mb-16 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 scroll-animate">
+                <div>
+                    <div class="flex items-center space-x-2 mb-2">
+                        <span class="w-5 h-[2px] bg-red-600"></span>
+                        <span class="text-xs font-bold uppercase tracking-[0.2em] text-red-500">Our Work</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black tracking-tight uppercase leading-none text-white">
+                        SELECTED<br>
+                        <span class="text-transparent text-stroke">PROJECTS</span>
+                    </h2>
+                </div>
+                <div>
+                    <!-- Click Trigger Target ID -->
+                    <button id="open-archive-btn" class="text-xs font-bold uppercase tracking-widest text-zinc-400 hover:text-white transition-all duration-300 flex items-center space-x-2 border-b border-zinc-800 hover:border-white pb-2 group bg-transparent cursor-pointer">
+                        <span>VIEW ALL PROJECTS</span>
+                        <svg class="w-3 h-3 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Web Development -->
+                <div class="md:col-span-2 bg-gradient-to-br from-[#0f172a] via-[#111827] to-[#0f172a] border border-slate-800/70 rounded-3xl min-h-[320px] p-8 relative group overflow-hidden cursor-pointer transition-all duration-500 hover:border-blue-500/40 hover:shadow-2xl hover:shadow-blue-950/20 scroll-animate">
+                    <div class="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="font-black tracking-tighter text-8xl md:text-9xl select-none text-white/5 group-hover:text-white/10 group-hover:scale-105 transition-all duration-500 ease-out uppercase">WEB</div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div class="absolute bottom-8 left-8 right-8 flex flex-col items-start z-10">
+                        <div class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-2 bg-blue-500/10 px-2.5 py-1 rounded-md border border-blue-500/20">Development & UI Design</div>
+                        <h3 class="text-xl md:text-2xl font-extrabold text-white mb-2 tracking-tight">Apex E-Commerce Premium Platform</h3>
+                        <p class="text-sm text-zinc-400 max-w-xl mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">A next-generation digital marketplace built with Next.js and Tailwind, offering sub-second load times and high-conversion micro-interactions.</p>
+                        <span class="text-xs font-bold uppercase tracking-wider text-blue-400 flex items-center gap-1 group-hover:text-white transition-colors">View Case Study <span class="text-xs font-light transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span></span>
+                    </div>
+                </div>
+
+                <!-- App Development -->
+                <div class="bg-gradient-to-br from-[#450a0a] via-[#1a0505] to-[#450a0a] border border-red-950/60 rounded-3xl min-h-[320px] p-8 relative group overflow-hidden cursor-pointer transition-all duration-500 hover:border-red-500/40 hover:shadow-2xl hover:shadow-red-950/30 scroll-animate">
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="font-black tracking-tighter text-8xl select-none text-white/5 group-hover:text-white/10 group-hover:scale-105 transition-all duration-500 ease-out uppercase">APP</div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div class="absolute bottom-8 left-8 right-8 flex flex-col items-start z-10">
+                        <div class="text-[10px] font-bold text-red-400 uppercase tracking-widest mb-2 bg-red-500/10 px-2.5 py-1 rounded-md border border-red-500/20">iOS & Android Apps</div>
+                        <h3 class="text-xl font-extrabold text-white mb-2 tracking-tight">Nova Ride-Hailing Mobile App</h3>
+                        <p class="text-sm text-zinc-400 mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">Real-time localized mapping and hyper-secure payment integration architectures built with Flutter.</p>
+                        <span class="text-xs font-bold uppercase tracking-wider text-red-400 flex items-center gap-1 group-hover:text-white transition-colors">View Case Study <span class="text-xs font-light transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span></span>
+                    </div>
+                </div>
+
+                <!-- SEO Optimization -->
+                <div class="bg-gradient-to-br from-[#064e3b] via-[#022c22] to-[#064e3b] border border-emerald-950/60 rounded-3xl min-h-[320px] p-8 relative group overflow-hidden cursor-pointer transition-all duration-500 hover:border-emerald-500/40 hover:shadow-2xl hover:shadow-emerald-950/30 scroll-animate">
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="font-black tracking-tighter text-8xl select-none text-white/5 group-hover:text-white/10 group-hover:scale-105 transition-all duration-500 ease-out uppercase">SEO</div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div class="absolute bottom-8 left-8 right-8 flex flex-col items-start z-10">
+                        <div class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest mb-2 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20">Digital Optimization</div>
+                        <h3 class="text-xl font-extrabold text-white mb-2 tracking-tight">GrowFresh Market — 3× Growth</h3>
+                        <p class="text-sm text-zinc-400 mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">Scale search optimization campaigns pushing systemic keywords to absolute Rank #1 on major web indexes.</p>
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-1 group-hover:text-white transition-colors">View Case Study <span class="text-xs font-light transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span></span>
+                    </div>
+                </div>
+
+                <!-- Brand Identity -->
+                <div class="bg-gradient-to-br from-[#78350f] via-[#451a03] to-[#78350f] border border-amber-950/60 rounded-3xl min-h-[320px] p-8 relative group overflow-hidden cursor-pointer transition-all duration-500 hover:border-amber-500/40 hover:shadow-2xl hover:shadow-amber-950/30 scroll-animate">
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="font-black tracking-tighter text-7xl select-none text-white/5 group-hover:text-white/10 group-hover:scale-105 transition-all duration-500 ease-out uppercase">LOGO</div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div class="absolute bottom-8 left-8 right-8 flex flex-col items-start z-10">
+                        <div class="text-[10px] font-bold text-amber-400 uppercase tracking-widest mb-2 bg-amber-500/10 px-2.5 py-1 rounded-md border border-amber-500/20">Brand Identity</div>
+                        <h3 class="text-xl font-extrabold text-white mb-2 tracking-tight">Velo Studio Rebranding</h3>
+                        <p class="text-sm text-zinc-400 mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">A minimal and sharp modular identity ecosystem rolled out globally across physical packaging and digital design languages.</p>
+                        <span class="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1 group-hover:text-white transition-colors">View Case Study <span class="text-xs font-light transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span></span>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="bg-gradient-to-br from-[#4c1d95] via-[#2e1065] to-[#4c1d95] border border-purple-950/60 rounded-3xl min-h-[320px] p-8 relative group overflow-hidden cursor-pointer transition-all duration-500 hover:border-purple-500/40 hover:shadow-2xl hover:shadow-purple-950/30 scroll-animate">
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="font-black tracking-tighter text-7xl select-none text-white/5 group-hover:text-white/10 group-hover:scale-105 transition-all duration-500 ease-out uppercase">SMM</div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div class="absolute bottom-8 left-8 right-8 flex flex-col items-start z-10">
+                        <div class="text-[10px] font-bold text-purple-400 uppercase tracking-widest mb-2 bg-purple-500/10 px-2.5 py-1 rounded-md border border-purple-500/20">Social Media</div>
+                        <h3 class="text-xl font-extrabold text-white mb-2 tracking-tight">Global Scale Ad Campaigns</h3>
+                        <p class="text-sm text-zinc-400 mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">Targeted data-driven marketing assets deploying immersive motion graphics and conversion optimization analytics loops.</p>
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-400 flex items-center gap-1 group-hover:text-white transition-colors">View Case Study <span class="text-xs font-light transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- [NEW COMPONENT]: EXTENDED PORTFOLIO ARCHIVE PANEL (MODAL SLIDE-OVER) -->
+    <div id="archive-modal" class="fixed inset-0 z-50 pointer-events-none invisible transition-all duration-500">
+        <!-- Semi-transparent Dark Glass Backdrop Overlay -->
+        <div id="archive-backdrop" class="absolute inset-0 bg-black/80 backdrop-blur-md opacity-0 transition-opacity duration-500 pointer-events-auto cursor-pointer"></div>
+        
+        <!-- Sliding Content Container Panel -->
+        <div id="archive-panel" class="absolute top-0 right-0 h-full w-full max-w-2xl bg-[#0d0d11] border-l border-zinc-800/80 shadow-2xl p-8 md:p-12 overflow-y-auto transform translate-x-full transition-transform duration-500 cubic-bezier(0.16, 1, 0.3, 1) pointer-events-auto">
+            
+            <!-- Modal Structural Top Bar Actions -->
+            <div class="flex items-center justify-between mb-12 border-b border-zinc-800/60 pb-6">
+                <div>
+                    <h3 class="text-xl font-black uppercase tracking-wider text-white">Project Archive</h3>
+                    <p class="text-xs text-zinc-500 mt-1">Comprehensive index of deployment records</p>
+                </div>
+                <button id="close-archive-btn" class="w-10 h-10 rounded-full border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white hover:border-zinc-600 transition-all cursor-pointer bg-zinc-900/40">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- List Index Grid of Additional Case Studies/Projects -->
+            <div class="space-y-6">
+                <!-- Archive Project 1 -->
+                <div class="group bg-zinc-900/30 border border-zinc-800/60 p-6 rounded-2xl hover:border-red-500/30 hover:bg-zinc-900/60 transition-all duration-300 cursor-pointer">
+                    <div class="flex justify-between items-start gap-4 mb-2">
+                        <span class="text-[10px] font-bold text-red-400 uppercase tracking-widest bg-red-500/10 px-2 py-0.5 rounded border border-red-500/20">Hospital Management Ecosystem</span>
+                        <span class="text-xs text-zinc-600 font-mono">2026</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white group-hover:text-red-400 transition-colors">VitalsCore Full-Stack HMS Platform</h4>
+                    <p class="text-xs text-zinc-400 mt-2 leading-relaxed">A custom modular clinical web dashboard managing structured patient registration ledgers, doctor availability shifts, and automated item billing engines.</p>
+                    <div class="flex gap-2 mt-4 text-[10px] font-mono text-zinc-500">
+                        <span>#PHP</span> <span>#MySQL</span> <span>#Tailwind</span>
+                    </div>
+                </div>
+
+                <!-- Archive Project 2 -->
+                <div class="group bg-zinc-900/30 border border-zinc-800/60 p-6 rounded-2xl hover:border-amber-500/30 hover:bg-zinc-900/60 transition-all duration-300 cursor-pointer">
+                    <div class="flex justify-between items-start gap-4 mb-2">
+                        <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">Airport Transfer UI</span>
+                        <span class="text-xs text-zinc-600 font-mono">2026</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white group-hover:text-amber-400 transition-colors">VTC Airport Paris Booking Engine</h4>
+                    <p class="text-xs text-zinc-400 mt-2 leading-relaxed">An optimized local private transport site layout engineered for lightning fast mobile asset loads, real-time fare estimations, and interactive reservation fields.</p>
+                    <div class="flex gap-2 mt-4 text-[10px] font-mono text-zinc-500">
+                        <span>#JavaScript</span> <span>#UI-Design</span> <span>#Logistics</span>
+                    </div>
+                </div>
+
+                <!-- Archive Project 3 -->
+                <div class="group bg-zinc-900/30 border border-zinc-800/60 p-6 rounded-2xl hover:border-blue-500/30 hover:bg-zinc-900/60 transition-all duration-300 cursor-pointer">
+                    <div class="flex justify-between items-start gap-4 mb-2">
+                        <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">SaaS Product</span>
+                        <span class="text-xs text-zinc-600 font-mono">2025</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white group-hover:text-blue-400 transition-colors">QuantumAnalytics Cloud Metrics Dashboard</h4>
+                    <p class="text-xs text-zinc-400 mt-2 leading-relaxed">Enterprise server resource tracing engine pulling system telemetries directly into streaming canvas charts with 0ms delay loops.</p>
+                    <div class="flex gap-2 mt-4 text-[10px] font-mono text-zinc-500">
+                        <span>#VueJS</span> <span>#NodeJS</span> <span>#WebSockets</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Meta within Modal -->
+            <div class="mt-12 text-center text-[11px] text-zinc-600 border-t border-zinc-900 pt-6">
+                End of available archival record history. New entries map dynamically.
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. AGENCY DATA METRICS SECTION -->
+    <section class="bg-[#09090b] py-16 px-6 relative border-t border-zinc-900">
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center scroll-animate">
+            <div class="p-6 bg-zinc-900/30 border border-zinc-800/50 rounded-2xl">
+                <div class="text-3xl md:text-4xl font-black text-white mb-1">120+</div>
+                <div class="text-xs font-bold tracking-widest uppercase text-zinc-500">Projects Launched</div>
+            </div>
+            <div class="p-6 bg-zinc-900/30 border border-zinc-800/50 rounded-2xl">
+                <div class="text-3xl md:text-4xl font-black text-red-500 mb-1">99%</div>
+                <div class="text-xs font-bold tracking-widest uppercase text-zinc-500">Client Satisfaction</div>
+            </div>
+            <div class="p-6 bg-zinc-900/30 border border-zinc-800/50 rounded-2xl">
+                <div class="text-3xl md:text-4xl font-black text-white mb-1">14+</div>
+                <div class="text-xs font-bold tracking-widest uppercase text-zinc-500">Industry Awards</div>
+            </div>
+            <div class="p-6 bg-zinc-900/30 border border-zinc-800/50 rounded-2xl">
+                <div class="text-3xl md:text-4xl font-black text-amber-400 mb-1">3.5M</div>
+                <div class="text-xs font-bold tracking-widest uppercase text-zinc-500">User Reach Generated</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. STRATEGIC WORK METHODOLOGY TIMELINE -->
+    <section id="process" class="bg-[#09090b] py-24 px-6 border-t border-zinc-900 relative">
+        <div class="max-w-6xl mx-auto relative">
+            <div class="mb-16 scroll-animate">
+                <div class="flex items-center space-x-2 mb-2">
+                    <span class="w-5 h-[2px] bg-amber-400"></span>
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-400">Execution Strategy</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tight text-white">
+                    HOW WE DRIVE<br><span class="text-transparent text-stroke">RESULTS</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                <div class="bg-zinc-900/20 border border-zinc-800/60 p-8 rounded-3xl relative overflow-hidden group hover:border-zinc-700 transition-all scroll-animate">
+                    <div class="text-6xl font-black text-zinc-800/50 absolute top-4 right-6 group-hover:text-red-600/20 transition-colors">01</div>
+                    <div class="w-10 h-10 rounded-xl bg-red-600/10 border border-red-500/20 flex items-center justify-center mb-6 text-red-500">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Discovery & Architecture</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">We strip away ambiguity to build comprehensive functional parameters, mapping UI systems and technical dependencies before writing code.</p>
+                </div>
+                <div class="bg-zinc-900/20 border border-zinc-800/60 p-8 rounded-3xl relative overflow-hidden group hover:border-zinc-700 transition-all scroll-animate">
+                    <div class="text-6xl font-black text-zinc-800/50 absolute top-4 right-6 group-hover:text-blue-600/20 transition-colors">02</div>
+                    <div class="w-10 h-10 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center mb-6 text-blue-400">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Agile Production</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">Our execution engines convert structural designs into fluid semantic applications featuring strict cross-device layouts and optimized rendering code.</p>
+                </div>
+                <div class="bg-zinc-900/20 border border-zinc-800/60 p-8 rounded-3xl relative overflow-hidden group hover:border-zinc-700 transition-all scroll-animate">
+                    <div class="text-6xl font-black text-zinc-800/50 absolute top-4 right-6 group-hover:text-emerald-600/20 transition-colors">03</div>
+                    <div class="w-10 h-10 rounded-xl bg-emerald-600/10 border border-emerald-500/20 flex items-center justify-center mb-6 text-emerald-400">
+                        <i class="fa-solid fa-gauge-high"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">QA & Systems Launch</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">Every operational component undergoes strict functional verification testing protocols to certify exceptional scale security metrics prior to server deployment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. CLIENT TESTIMONIALS INSIGHT GRID -->
+    <section id="testimonials" class="bg-[#09090b] py-24 px-6 border-t border-zinc-900 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-16 text-center md:text-left scroll-animate">
+                <div class="flex items-center justify-center md:justify-start space-x-2 mb-2">
+                    <span class="w-5 h-[2px] bg-purple-500"></span>
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-purple-400">Endorsements</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-black uppercase text-white tracking-tight">TRUSTED BY<br><span class="text-transparent text-stroke">LEADERS</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-zinc-900/40 border border-zinc-800/80 p-8 rounded-3xl flex flex-col justify-between scroll-animate">
+                    <p class="text-sm text-zinc-300 italic leading-relaxed mb-6">
+                        "RATSCH completely re-engineered our digital asset delivery pipeline. The performance improvements on our updated premium web applications directly scaled conversion metrics by 40% inside 90 days."
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-11 h-11 bg-zinc-800 rounded-xl flex items-center justify-center font-bold text-sm border border-zinc-700 text-white">MK</div>
+                        <div>
+                            <h4 class="text-xs font-bold text-white">Marcus Vance</h4>
+                            <span class="text-[10px] uppercase font-black tracking-widest text-zinc-500 block mt-0.5">Director of Product &middot; Apex Global</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-zinc-900/40 border border-zinc-800/80 p-8 rounded-3xl flex flex-col justify-between scroll-animate">
+                    <p class="text-sm text-zinc-300 italic leading-relaxed mb-6">
+                        "Their structural strategy and clean layout frameworks minimized complexity throughout our entire brand transition project. True full-suite professionals with execution speed."
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-11 h-11 bg-zinc-800 rounded-xl flex items-center justify-center font-bold text-sm border border-zinc-700 text-amber-400">SL</div>
+                        <div>
+                            <h4 class="text-xs font-bold text-white">Sarah Lindstrom</h4>
+                            <span class="text-[10px] uppercase font-black tracking-widest text-zinc-500 block mt-0.5">Operations Head &middot; Velo Group</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FOOTER SECTION -->
+    <footer class="bg-[#8B0000] text-white pt-16 pb-24 px-6 md:px-12 font-sans relative overflow-hidden select-none" style="border-radius: 45px 45px 0 0;">
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-black/20 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 pb-12 border-b border-white/10">
+                
+                <div class="sm:col-span-2 lg:col-span-2 space-y-5">
+                    <div class="leading-none">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <div class="flex space-x-1 transform rotate-[20deg]">
+                                <div class="w-2.5 h-6 bg-white rounded-full"></div>
+                                <div class="w-2.5 h-6 bg-amber-400 rounded-full"></div>
+                            </div>
+                            <span class="text-3xl font-black tracking-tight text-white block">RATSCH</span>
+                        </div>
+                        <div class="text-[10px] font-black uppercase tracking-[0.22em] text-amber-400/90">Creative & Media Group</div>
+                    </div>
+                    <p class="text-sm text-red-100/80 leading-relaxed max-w-sm font-light">
+                        A full-service digital agency crafting premium web experiences, apps, and brand identities for ambitious businesses across Asia and beyond.
+                    </p>
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <a href="#" class="w-9 h-9 bg-white/10 border border-white/10 rounded-xl flex items-center justify-center text-white hover:bg-white hover:text-[#8B0000] transition-all duration-300 transform hover:-translate-y-0.5 shadow-md" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/10 border border-white/10 rounded-xl flex items-center justify-center text-white hover:bg-white hover:text-[#8B0000] transition-all duration-300 transform hover:-translate-y-0.5 shadow-md" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/10 border border-white/10 rounded-xl flex items-center justify-center text-white hover:bg-white hover:text-[#8B0000] transition-all duration-300 transform hover:-translate-y-0.5 shadow-md" aria-label="Twitter X">
+                            <i class="fa-brands fa-x-twitter text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/10 border border-white/10 rounded-xl flex items-center justify-center text-white hover:bg-white hover:text-[#8B0000] transition-all duration-300 transform hover:-translate-y-0.5 shadow-md" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-amber-400 font-black text-xs tracking-widest uppercase border-b border-white/10 pb-2">Services</h4>
+                    <ul class="space-y-3 text-xs font-semibold text-red-50">
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Web Development</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">SEO Optimization</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Digital Marketing</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">App Development</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Website Hosting</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-amber-400 font-black text-xs tracking-widest uppercase border-b border-white/10 pb-2">Company</h4>
+                    <ul class="space-y-3 text-xs font-semibold text-red-50">
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">About Us</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Our Work</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-amber-400 font-black text-xs tracking-widest uppercase border-b border-white/10 pb-2">Legal</h4>
+                    <ul class="space-y-3 text-xs font-semibold text-red-50">
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Cookie Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-amber-400 font-black text-xs tracking-widest uppercase border-b border-white/10 pb-2">Contact</h4>
+                    <ul class="space-y-3 text-xs font-semibold text-red-100/90">
+                        <li><a href="tel:+11234567890" class="hover:text-white transition-colors duration-200 block py-0.5">+1 (123) 456-7890</a></li>
+                        <li><a href="mailto:hello@ratsch.co" class="hover:text-white transition-colors duration-200 block py-0.5">hello@ratsch.co</a></li>
+                        <li><span class="block py-0.5 leading-relaxed">123 Example Street, City, Country</span></li>
+                        <li><span class="text-red-200/60 block py-0.5">Mon–Fri: 9am – 6pm</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] tracking-wider font-semibold text-red-200/70">
+                <div class="text-center md:text-left">
+                    &copy; 2026 <span class="text-white font-bold">RATSCH Creative & Media Group</span>. All rights reserved.
+                </div>
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 uppercase text-[10px] tracking-widest text-red-200/80">
+                    <a href="#" class="hover:text-white transition-colors duration-200">Linkedin</a>
+                    <a href="#" class="hover:text-white transition-colors duration-200">Instagram</a>
+                    <a href="#" class="hover:text-white transition-colors duration-200">Twitter</a>
+                    <a href="#" class="hover:text-white transition-colors duration-200">Youtube</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE STATES CONTROL INTERACTION SCRIPTS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- 1. Intersection Observer for Scroll Entrance Transitions ---
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.08
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.scroll-animate').forEach(el => {
+                observer.observe(el);
+            });
+
+            // --- 2. Interactive Sliding Archive Modal Controller Logic ---
+            const openBtn = document.getElementById('open-archive-btn');
+            const closeBtn = document.getElementById('close-archive-btn');
+            const backdrop = document.getElementById('archive-backdrop');
+            const modalWrapper = document.getElementById('archive-modal');
+            const slidingPanel = document.getElementById('archive-panel');
+
+            // Action Functions
+            function openArchive() {
+                // Prevent background window from scrolling while view layer is visible
+                document.body.style.overflow = 'hidden';
+                
+                modalWrapper.classList.remove('invisible');
+                // Allow thread repaint time to notice removal before toggling smooth transition classes
+                setTimeout(() => {
+                    backdrop.classList.replace('opacity-0', 'opacity-100');
+                    slidingPanel.classList.replace('translate-x-full', 'translate-x-0');
+                }, 20);
+            }
+
+            function closeArchive() {
+                document.body.style.overflow = ''; // Restore default body scrolling layers
+                
+                backdrop.classList.replace('opacity-100', 'opacity-0');
+                slidingPanel.classList.replace('translate-x-0', 'translate-x-full');
+
+                // Wait until slide-out transition finishes before applying display toggle rules
+                setTimeout(() => {
+                    modalWrapper.classList.add('invisible');
+                }, 500);
+            }
+
+            // Event Triggers
+            openBtn.addEventListener('click', openArchive);
+            closeBtn.addEventListener('click', closeArchive);
+            backdrop.addEventListener('click', closeArchive);
+
+            // Close automatically if escape key code is detected
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !modalWrapper.classList.contains('invisible')) {
+                    closeArchive();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
