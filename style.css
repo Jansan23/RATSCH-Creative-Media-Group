@@ -1,0 +1,105 @@
+/* Consolidated site styles moved from individual pages */
+
+/* --- Index / CTA --- */
+.glow-btn {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+    animation: pulseGlow 2.5s infinite ease-in-out;
+}
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 15px rgba(59, 130, 246, 0.5); transform: scale(1); }
+    50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8); transform: scale(1.03); }
+}
+
+.fade-in-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.215, 0.610, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.fade-in-card.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes floatSlow {
+    0%, 100% { transform: translateY(0px) rotate(-12deg); }
+    50% { transform: translateY(-15px) rotate(-8deg); }
+}
+@keyframes floatSlowReverse {
+    0%, 100% { transform: translateY(0px) rotate(12deg); }
+    50% { transform: translateY(15px) rotate(16deg); }
+}
+.floating-icon-left { animation: floatSlow 6s infinite ease-in-out; }
+.floating-icon-right { animation: floatSlowReverse 7s infinite ease-in-out; }
+
+/* --- About / Global Utilities --- */
+@keyframes spin-slow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.animate-spin-slow { animation: spin-slow 20s linear infinite; }
+
+/* --- Portfolio / general text effects --- */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+.text-stroke {
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.3);
+}
+
+/* --- Services / advanced UI tokens --- */
+html { scroll-behavior: smooth; }
+.hero-bg {
+    background: linear-gradient(135deg, rgba(225,42,42,0.96) 35%, rgba(20,20,50,0.55) 100%),
+                url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center 25%;
+    background-blend-mode: multiply;
+}
+
+.vertical-text { writing-mode: vertical-rl; text-orientation: mixed; }
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-reveal.active { opacity: 1; transform: translateY(0) scale(1); }
+
+.text-stroke-dark { -webkit-text-stroke: 1px rgba(17, 17, 17, 0.15); }
+.reveal-on-scroll { opacity: 0; transform: translateY(2rem); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.reveal-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
+
+.metric-border-grow { position: relative; }
+.metric-border-grow::before { content: ''; position: absolute; left: 0; top: 0; width: 1px; height: 100%; background-color: #E2E8F0; transition: background-color 0.4s ease; }
+.metric-border-grow::after { content: ''; position: absolute; left: 0; top: 0; width: 1px; height: 0%; background-color: #E12A2A; transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+.group:hover.metric-border-grow::after { height: 100%; }
+.group:hover.metric-border-grow::before { background-color: transparent; }
+
+.font-editorial { font-family: 'Playfair Display', Georgia, serif; }
+.font-interface { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+.reveal-frame { opacity: 0; transform: translateY(30px); transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1); }
+.reveal-frame.is-visible { opacity: 1; transform: translateY(0); }
+
+@keyframes lineFlow { 0% { transform: translateY(-100%); } 100% { transform: translateY(100%); } }
+.bg-grid-line::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 30%; background: linear-gradient(to bottom, transparent, rgba(225, 42, 42, 0.15), transparent); animation: lineFlow 8s infinite linear; }
+
+.process-card-reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.process-card-reveal.is-animated { opacity: 1; transform: translateY(0); }
+
+.animated-top-border { position: relative; }
+.animated-top-border::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 1px; background-color: #1F2937; transition: background-color 0.4s ease; }
+.animated-top-border::after { content: ''; position: absolute; top: 0; left: 50%; width: 0; height: 1px; background-color: #E12A2A; transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), left 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+.group:hover.animated-top-border::after { width: 100%; left: 0; }
+
+/* Utility: reveal frame for various sections */
+.reveal-frame, .reveal-on-scroll, .scroll-reveal { will-change: transform, opacity; }
+
+/* Fallbacks and small helpers */
+.text-stroke, .text-stroke-dark { -webkit-font-smoothing: antialiased; }

@@ -21,41 +21,8 @@
             }
         }
     </script>
-    <style>
-        /* Smooth visual flow across sections */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Custom premium hero background blending with portrait dynamic styling */
-        .hero-bg {
-            background: linear-gradient(135deg, rgba(225,42,42,0.96) 35%, rgba(20,20,50,0.55) 100%), 
-                        url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center 25%;
-            background-blend-mode: multiply;
-        }
-    </style>
-</head>
-<body class="bg-white text-brandDark antialiased font-sans selection:bg-brandRed selection:text-white">
-
-    <div class="w-full bg-[#990a12] pt-4 pb-6">
-    <header class="p-4 font-sans select-none relative z-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="bg-white rounded-[32px] px-8 py-5 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-5">
-                <div class="flex items-center space-x-3">
-                    <div class="flex space-x-1.5 transform rotate-[20deg] mr-1">
-                        <div class="w-3.5 h-8 bg-[#1E293B] rounded-full"></div>
-                        <div class="w-3.5 h-8 bg-[#990a12] rounded-full"></div>
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="text-3xl font-black tracking-tight text-[#1E293B] leading-none">RATSCH</span>
-                        <span class="text-[9px] font-bold uppercase tracking-[0.22em] text-slate-400 mt-1">Creative & Media Group</span>
-                    </div>
-                </div>
-                <nav>
-                    <ul class="flex flex-wrap justify-center items-center gap-x-8 gap-y-2 text-xs font-black uppercase tracking-wider text-[#1E293B]">
-                        <li><a href="index.html" class="hover:text-[#990a12] transition-colors duration-200">Home</a></li>
-                        <li><a href="about.html" class="hover:text-[#990a12] transition-colors duration-200">About</a></li>
+    <link rel="stylesheet" href="style.css">
+ 
                         <li><a href="services.html" class="text-[#990a12] border-b-2 border-[#990a12] pb-1">Services</a></li>
                         <li><a href="portfolio.html" class="hover:text-[#990a12] transition-colors duration-200">Portfolio</a></li>
                         <li><a href="contact.html" class="hover:text-[#990a12] transition-colors duration-200">Contact</a></li>
@@ -69,27 +36,6 @@
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<style>
-    /* Custom utility classes for premium visual treatments */
-    .text-stroke {
-        -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.4);
-    }
-    .vertical-text {
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
-    }
-    /* Hidden state for smooth entry acceleration animations */
-    .scroll-reveal {
-        opacity: 0;
-        transform: translateY(30px) scale(0.98);
-        transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .scroll-reveal.active {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-</style>
 
 <section id="services" class="bg-[#0b111e] text-white py-28 px-6 mt-8 relative overflow-hidden select-none">
     
@@ -261,124 +207,10 @@
 
 
 
-<style>
-    /* Premium text stroke style for elegant section numbering or backdrops */
-    .text-stroke-dark {
-        -webkit-text-stroke: 1px rgba(17, 17, 17, 0.15);
-    }
-    /* Hidden scroll state class */
-    .reveal-on-scroll {
-        opacity: 0;
-        transform: translateY(2rem);
-        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .reveal-on-scroll.is-visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-</style>
-
-<style>
-    /* Premium micro-animations for meta counters */
-    .metric-border-grow {
-        position: relative;
-    }
-    .metric-border-grow::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 2px;
-        height: 100%;
-        background-color: #E2E8F0; /* default tailwind slate-200 */
-        transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .metric-border-grow::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 2px;
-        height: 0%;
-        background-color: #E12A2A; /* brandRed */
-        transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .group:hover.metric-border-grow::after {
-        height: 100%;
-    }
-    .group:hover.metric-border-grow::before {
-        background-color: transparent;
-    }
-</style>
-
+ 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-    /* Premium modern font styling tokens */
-    .font-editorial {
-        font-family: 'Playfair Display', Georgia, serif;
-    }
-    .font-interface {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-
-    /* Interactive expanding border mechanics */
-    .metric-border-grow {
-        position: relative;
-    }
-    .metric-border-grow::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 1px;
-        height: 100%;
-        background-color: #E2E8F0;
-        transition: background-color 0.4s ease;
-    }
-    .metric-border-grow::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 1px;
-        height: 0%;
-        background-color: #E12A2A; /* brandRed */
-        transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .group:hover.metric-border-grow::after {
-        height: 100%;
-    }
-
-    /* Scroll animations with masking clip paths */
-    .reveal-frame {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .reveal-frame.is-visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    /* Clean background grid linear flow animation */
-    @keyframes lineFlow {
-        0% { transform: translateY(-100%); }
-        100% { transform: translateY(100%); }
-    }
-    .bg-grid-line::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 30%;
-        background: linear-gradient(to bottom, transparent, rgba(225, 42, 42, 0.15), transparent);
-        animation: lineFlow 8s infinite linear;
-    }
-</style>
 
 <section class="bg-brandGray py-28 px-6 md:px-12 border-b border-gray-100 relative overflow-hidden font-interface">
     
@@ -450,53 +282,7 @@
     });
 </script>
 
-   <style>
-    /* Premium horizontal connecting line animation */
-    .process-grid-container {
-        position: relative;
-    }
-    
-    /* Reveal structural animation classes */
-    .process-card-reveal {
-        opacity: 0;
-        transform: translateY(24px);
-        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    
-    .process-card-reveal.is-animated {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    /* Interactive expanding border mechanics */
-    .animated-top-border {
-        position: relative;
-    }
-    .animated-top-border::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: #1F2937; /* Gray-800 */
-        transition: background-color 0.4s ease;
-    }
-    .animated-top-border::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        width: 0;
-        height: 1px;
-        background-color: #E12A2A; /* brandRed */
-        transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .group:hover.animated-top-border::after {
-        width: 100%;
-        left: 0;
-    }
-</style>
+   
 
 <section id="process" class="bg-brandDark text-white py-28 px-6 md:py-36 md:px-12 relative overflow-hidden">
     
@@ -629,27 +415,7 @@
     });
 </script>
 
-    <style>
-    /* Global scroll reveal mechanics */
-    .stack-reveal {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .stack-reveal.is-revealed {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    /* Clean micro-interaction for sub-items */
-    .tool-group {
-        position: relative;
-        padding-left: 0;
-        transition: padding 0.3s ease;
-    }
-    .tool-group:hover {
-        padding-left: 6px;
-    }
-</style>
+    
 
 <section id="stack" class="py-24 px-6 md:py-32 md:px-12 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-start border-b border-gray-100 overflow-hidden">
     
