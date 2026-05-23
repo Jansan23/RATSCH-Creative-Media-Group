@@ -22,20 +22,51 @@
         }
     </script>
     <link rel="stylesheet" href="style.css">
- 
+
+
+
+    <div class="w-full bg-white/0 pt-6 pb-6">
+    <header class="max-w-7xl mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="bg-white rounded-[32px] px-8 py-5 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-5">
+                <div class="flex items-center space-x-3">
+                    <div class="flex space-x-1.5 transform rotate-[20deg] mr-1">
+                        <div class="w-3.5 h-8 bg-[#1E293B] rounded-full"></div>
+                        <div class="w-3.5 h-8 bg-[#990a12] rounded-full"></div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-3xl font-black tracking-tight text-[#1E293B] leading-none">RATSCH</span>
+                        <span class="text-[9px] font-bold uppercase tracking-[0.22em] text-slate-400 mt-1">Creative & Media Group</span>
+                    </div>
+                </div>
+                <nav>
+                    <ul class="flex flex-wrap justify-center items-center gap-x-8 gap-y-2 text-xs font-black uppercase tracking-wider text-[#1E293B]">
+                        <li><a href="index.html" class="hover:text-[#990a12] transition-colors duration-200">Home</a></li>
+                        <li><a href="about.html" class="hover:text-[#990a12] transition-colors duration-200">About</a></li>
                         <li><a href="services.html" class="text-[#990a12] border-b-2 border-[#990a12] pb-1">Services</a></li>
                         <li><a href="portfolio.html" class="hover:text-[#990a12] transition-colors duration-200">Portfolio</a></li>
                         <li><a href="contact.html" class="hover:text-[#990a12] transition-colors duration-200">Contact</a></li>
                     </ul>
                 </nav>
+                <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none absolute right-8 top-7 p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-xl transition-transform" id="menu-icon"></i>
+                </button>
             </div>
         </div>
     </header>
     </div>
 
 
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="max-h-0 overflow-hidden md:hidden flex flex-col items-center space-y-2 font-bold text-sm uppercase text-gray-600 transition-all duration-300 ease-in-out">
+        <a href="index.html" class="mobile-link hover:text-[#990a12] w-full text-center py-2 hover:bg-gray-50 rounded-lg mt-3">Home</a>
+        <a href="about.html" class="mobile-link hover:text-[#990a12] w-full text-center py-2 hover:bg-gray-50 rounded-lg">About</a>
+        <a href="services.html" class="mobile-link text-[#990a12] w-full text-center py-2 bg-gray-50/20 rounded-lg">Services</a>
+        <a href="portfolio.html" class="mobile-link hover:text-[#990a12] w-full text-center py-2 hover:bg-gray-50 rounded-lg">Portfolio</a>
+        <a href="contact.html" class="mobile-link hover:text-[#990a12] w-full text-center py-2 hover:bg-gray-50 rounded-lg">Contact</a>
+    </div>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <section id="services" class="bg-[#0b111e] text-white py-28 px-6 mt-8 relative overflow-hidden select-none">
     
