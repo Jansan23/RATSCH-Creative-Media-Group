@@ -103,3 +103,9 @@ html { scroll-behavior: smooth; }
 
 /* Fallbacks and small helpers */
 .text-stroke, .text-stroke-dark { -webkit-font-smoothing: antialiased; }
+
+/* --- Per-page font-family rules moved from inline <style> tags --- */
+body.index-page { font-family: 'Poppins', sans-serif; }
+body.contact-page { font-family: 'Poppins', sans-serif; }
+body.portfolio-page { font-family: 'Poppins', sans-serif; }
+body.about-page { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
