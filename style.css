@@ -1,5 +1,13 @@
 /* Consolidated site styles moved from individual pages */
 
+:root {
+    --brand-red: #E12A2A;
+    --brand-dark: #990a12;
+    --brand-deep: #8B0000;
+    --accent-text: #1E293B;
+    --muted-white: rgba(255,255,255,0.92);
+}
+
 /* --- Index / CTA --- */
 .glow-btn {
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
@@ -55,7 +63,7 @@
 /* --- Services / advanced UI tokens --- */
 html { scroll-behavior: smooth; }
 .hero-bg {
-    background: linear-gradient(135deg, rgba(225,42,42,0.96) 35%, rgba(20,20,50,0.55) 100%),
+    background: linear-gradient(135deg, var(--brand-red) 35%, rgba(20,20,50,0.55) 100%),
                 url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80');
     background-size: cover;
     background-position: center 25%;
@@ -112,11 +120,11 @@ body.about-page { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidd
 
 /* --- Site banner + pill header (screenshot match) --- */
 .site-banner {
-    background: linear-gradient(180deg, #8B0000 0%, #990a12 60%);
+    background: linear-gradient(180deg, var(--brand-deep) 0%, var(--brand-dark) 60%);
 }
 .site-header {
     background: #ffffff;
-    color: #1E293B;
+    color: var(--accent-text);
     max-width: 1150px;
     margin: 0 auto;
     padding: 18px 28px;
@@ -129,10 +137,10 @@ body.about-page { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidd
 }
 .site-header .logo { display: flex; align-items: center; gap: 12px; }
 .site-header .logo .mark { width: 36px; height: 38px; border-radius: 8px; }
-.site-nav { display: flex; gap: 34px; align-items: center; font-weight: 800; text-transform: uppercase; font-size: 13px; letter-spacing: 0.08em; }
-.site-nav a { color: #1E293B; transition: color .18s ease; padding-bottom: 6px; }
-.site-nav a:hover { color: #990a12; }
-.site-nav a.active { color: #990a12; border-bottom: 3px solid #990a12; }
+.site-nav { display: flex; gap: 28px; align-items: center; font-weight: 800; text-transform: uppercase; font-size: 13px; letter-spacing: 0.08em; }
+.site-nav a { color: var(--accent-text); transition: color .18s ease; padding-bottom: 6px; }
+.site-nav a:hover { color: var(--brand-dark); }
+.site-nav a.active { color: var(--brand-dark); border-bottom: 3px solid var(--brand-dark); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
 
 @media (max-width: 768px) {
     .site-header { padding: 12px 16px; }
