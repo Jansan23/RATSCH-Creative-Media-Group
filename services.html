@@ -25,27 +25,28 @@
 
 
 
-    <div class="w-full bg-white/0 pt-6 pb-6">
-    <header class="max-w-7xl mx-auto px-6">
-        <div class="max-w-6xl mx-auto">
-            <div class="bg-white rounded-[32px] px-8 py-5 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-5">
-                <div class="flex items-center space-x-3">
-                    <div class="flex space-x-1.5 transform rotate-[20deg] mr-1">
-                        <div class="w-3.5 h-8 bg-[#1E293B] rounded-full"></div>
-                        <div class="w-3.5 h-8 bg-[#990a12] rounded-full"></div>
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="text-3xl font-black tracking-tight text-[#1E293B] leading-none">RATSCH</span>
-                        <span class="text-[9px] font-bold uppercase tracking-[0.22em] text-slate-400 mt-1">Creative & Media Group</span>
+    <div class="site-banner w-full py-6 flex justify-center">
+    <header class="site-header z-50">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-5 w-full">
+                <div class="logo">
+                    <div class="flex items-center space-x-3">
+                        <div class="flex space-x-1.5 transform rotate-[20deg] mr-1">
+                            <div class="mark" style="background:#1E293B;"></div>
+                            <div class="mark" style="background:#990a12;"></div>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-3xl font-black tracking-tight text-[#1E293B] leading-none">RATSCH</span>
+                            <span class="text-[9px] font-bold uppercase tracking-[0.22em] text-slate-400 mt-1">Creative & Media Group</span>
+                        </div>
                     </div>
                 </div>
                 <nav>
-                    <ul class="flex flex-wrap justify-center items-center gap-x-8 gap-y-2 text-xs font-black uppercase tracking-wider text-[#1E293B]">
-                        <li><a href="index.html" class="hover:text-[#990a12] transition-colors duration-200">Home</a></li>
-                        <li><a href="about.html" class="hover:text-[#990a12] transition-colors duration-200">About</a></li>
-                        <li><a href="services.html" class="text-[#990a12] border-b-2 border-[#990a12] pb-1">Services</a></li>
-                        <li><a href="portfolio.html" class="hover:text-[#990a12] transition-colors duration-200">Portfolio</a></li>
-                        <li><a href="contact.html" class="hover:text-[#990a12] transition-colors duration-200">Contact</a></li>
+                    <ul class="site-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html" class="active">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
                 <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none absolute right-8 top-7 p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle Menu">
@@ -73,7 +74,7 @@
     <div class="absolute -top-40 -left-40 w-96 h-96 bg-red-600/5 rounded-full blur-[120px] pointer-events-none"></div>
     <div class="absolute -bottom-40 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-[120px] pointer-events-none"></div>
 
-    <div class="vertical-text absolute right-2 top-1/2 -translate-y-1/2 text-[#121b2d] opacity-40 text-8xl md:text-[12rem] select-none uppercase tracking-[0.25em] pointer-events-none font-black transition-all duration-700">
+    <div class="vertical-text absolute right-2 top-1/2 -translate-y-1/2 text-red-600 opacity-25 text-8xl md:text-[12rem] select-none uppercase tracking-[0.25em] pointer-events-none font-black transition-all duration-700 z-0">
         SERVICES
     </div>
 
@@ -607,13 +608,13 @@
                         <div class="flex items-center space-x-3 mb-2">
                             <div class="flex space-x-1 transform rotate-[20deg]">
                                 <div class="w-2.5 h-6 bg-white rounded-full"></div>
-                                <div class="w-2.5 h-6 bg-amber-400 rounded-full"></div>
+                                <div class="w-2.5 h-6 bg-red-400 rounded-full"></div>
                             </div>
                             <span class="text-3xl font-black tracking-tight text-white block">
                                 RATSCH
                             </span>
                         </div>
-                        <div class="text-[10px] font-black uppercase tracking-[0.22em] text-amber-400/90">Creative & Media Group</div>
+                        <div class="text-[10px] font-black uppercase tracking-[0.22em] text-red-400/90">Creative & Media Group</div>
                     </div>
                     
                     <p class="text-sm text-red-100/80 leading-relaxed max-w-sm font-light">
@@ -637,38 +638,38 @@
                 </div>
 
                 <div class="space-y-4">
-                    <h4 class="text-amber-400 font-black text-xs tracking-widest uppercase border-b border-white/10 pb-2">Services</h4>
+                    <h4 class="text-red-400 font-black text-xs tracking-widest uppercase border-b border-white/10 pb-2">Services</h4>
                     <ul class="space-y-3 text-xs font-semibold text-red-50">
-                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Web Development</a></li>
-                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">SEO Optimization</a></li>
-                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Digital Marketing</a></li>
-                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">App Development</a></li>
-                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Website Hosting</a></li>
+                        <li><a href="#" class="hover:text-red-300 transition-colors duration-200 block py-0.5">Web Development</a></li>
+                        <li><a href="#" class="hover:text-red-300 transition-colors duration-200 block py-0.5">SEO Optimization</a></li>
+                        <li><a href="#" class="hover:text-red-300 transition-colors duration-200 block py-0.5">Digital Marketing</a></li>
+                        <li><a href="#" class="hover:text-red-300 transition-colors duration-200 block py-0.5">App Development</a></li>
+                        <li><a href="#" class="hover:text-red-300 transition-colors duration-200 block py-0.5">Website Hosting</a></li>
                     </ul>
                 </div>
 
                 <div class="space-y-4">
-                    <h4 class="text-amber-400 font-black text-xs tracking-widest uppercase border-b border-white/10 pb-2">Company</h4>
+                    <h4 class="text-red-400 font-black text-xs tracking-widest uppercase border-b border-white/10 pb-2">Company</h4>
                     <ul class="space-y-3 text-xs font-semibold text-red-50">
-                        <li><a href="index.html" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Home</a></li>
-                        <li><a href="about.html" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">About</a></li>
-                        <li><a href="services.html" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Services</a></li>
-                        <li><a href="portfolio.html" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Portfolio</a></li>
-                        <li><a href="contact.html" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Contact</a></li>
+                        <li><a href="index.html" class="hover:text-red-300 transition-colors duration-200 block py-0.5">Home</a></li>
+                        <li><a href="about.html" class="hover:text-red-300 transition-colors duration-200 block py-0.5">About</a></li>
+                        <li><a href="services.html" class="hover:text-red-300 transition-colors duration-200 block py-0.5">Services</a></li>
+                        <li><a href="portfolio.html" class="hover:text-red-300 transition-colors duration-200 block py-0.5">Portfolio</a></li>
+                        <li><a href="contact.html" class="hover:text-red-300 transition-colors duration-200 block py-0.5">Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="space-y-4">
-                    <h4 class="text-amber-400 font-black text-xs tracking-widest uppercase border-b border-white/10 pb-2">Legal</h4>
+                    <h4 class="text-red-400 font-black text-xs tracking-widest uppercase border-b border-white/10 pb-2">Legal</h4>
                     <ul class="space-y-3 text-xs font-semibold text-red-50">
-                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Terms of Service</a></li>
-                        <li><a href="#" class="hover:text-amber-300 transition-colors duration-200 block py-0.5">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-red-300 transition-colors duration-200 block py-0.5">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-red-300 transition-colors duration-200 block py-0.5">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-red-300 transition-colors duration-200 block py-0.5">Cookie Policy</a></li>
                     </ul>
                 </div>
 
                 <div class="space-y-4">
-                    <h4 class="text-amber-400 font-black text-xs tracking-widest uppercase border-b border-white/10 pb-2">Contact</h4>
+                    <h4 class="text-red-400 font-black text-xs tracking-widest uppercase border-b border-white/10 pb-2">Contact</h4>
                     <ul class="space-y-3 text-xs font-semibold text-red-100/90">
                         <li><a href="tel:+11234567890" class="hover:text-white transition-colors duration-200 block py-0.5">+1 (123) 456-7890</a></li>
                         <li><a href="mailto:hello@ratsch.co" class="hover:text-white transition-colors duration-200 block py-0.5">hello@ratsch.co</a></li>
