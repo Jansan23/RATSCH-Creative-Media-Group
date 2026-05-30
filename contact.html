@@ -44,6 +44,13 @@
         </div>
     </header>
     </div>
+    <div id="mobile-menu" class="max-h-0 overflow-hidden md:hidden flex flex-col items-center space-y-2 font-bold text-sm uppercase text-gray-600 transition-all duration-300 ease-in-out">
+        <a href="index.html" class="w-full text-center py-2 hover:bg-gray-50 rounded-lg mt-3">Home</a>
+        <a href="about.html" class="w-full text-center py-2 hover:bg-gray-50 rounded-lg">About</a>
+        <a href="services.html" class="w-full text-center py-2 hover:bg-gray-50 rounded-lg">Services</a>
+        <a href="portfolio.html" class="w-full text-center py-2 hover:bg-gray-50 rounded-lg">Portfolio</a>
+        <a href="contact.html" class="w-full text-center py-2 hover:bg-gray-50 rounded-lg">Contact</a>
+    </div>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10 space-y-16">
         
@@ -145,7 +152,7 @@
                     </div>
 
                     <div class="pt-4">
-                        <button type="submit" class="group relative w-full bg-red-400 hover:bg-red-300 text-slate-950 font-black uppercase tracking-[0.25em] text-xs py-4.5 px-8 rounded-xl flex items-center justify-center space-x-3 transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg overflow-hidden">
+                        <button type="submit" class="btn btn-primary group relative w-full font-black uppercase tracking-[0.25em] text-xs py-4.5 px-8 rounded-xl flex items-center justify-center space-x-3 transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg overflow-hidden">
                             <span>SEND BRIEF</span>
                             <i class="fa-solid fa-arrow-right text-xs transform group-hover:translate-x-1 transition-transform"></i>
                         </button>
@@ -187,6 +194,31 @@
 
             alert(`Thank you, ${data.firstname}! Your inquiry about "${data.service}" has been received.`);
             this.reset();
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    if (mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px') {
+                        mobileMenu.style.maxHeight = '0px';
+                        if (menuIcon) menuIcon.style.transform = 'rotate(0deg)';
+                    } else {
+                        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                        if (menuIcon) menuIcon.style.transform = 'rotate(90deg)';
+                    }
+                });
+
+                mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+                    mobileMenu.style.maxHeight = '0px';
+                    if (menuIcon) menuIcon.style.transform = 'rotate(0deg)';
+                }));
+            }
         });
     </script>
 

@@ -14,7 +14,7 @@
 <body class="bg-slate-50 text-slate-800 antialiased about-page">
 
     <div class="site-banner w-full py-6 flex justify-center">
-    <header class="site-header z-50">
+    <header class="site-header z-50 container">
         <div class="flex flex-col md:flex-row items-center justify-between gap-5 w-full">
                 <div class="logo">
                     <div class="flex items-center space-x-3">
@@ -37,6 +37,18 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
+
+                <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none p-2 rounded-lg" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                </button>
+        </div>
+
+        <div id="mobile-menu" class="max-h-0 overflow-hidden md:hidden flex flex-col items-center space-y-2 font-bold text-sm uppercase text-gray-600 transition-all duration-300 ease-in-out">
+            <a href="index.html" class="w-full text-center py-2 hover:bg-gray-50 rounded-lg mt-3">Home</a>
+            <a href="about.html" class="w-full text-center py-2 hover:bg-gray-50 rounded-lg">About</a>
+            <a href="services.html" class="w-full text-center py-2 hover:bg-gray-50 rounded-lg">Services</a>
+            <a href="portfolio.html" class="w-full text-center py-2 hover:bg-gray-50 rounded-lg">Portfolio</a>
+            <a href="contact.html" class="w-full text-center py-2 hover:bg-gray-50 rounded-lg">Contact</a>
         </div>
     </header>
     </div>
@@ -232,7 +244,7 @@
                         Our success is built on the dedication and expertise of our team, who work together to bring innovative ideas and exceptional craftsmanship to every media project.
                     </p>
                 </div>
-                <button class="bg-slate-950 text-white text-xs font-bold uppercase tracking-wider px-6 py-4 rounded-xl hover:bg-[#E12A2A] hover:text-slate-950 transform hover:-translate-y-0.5 transition duration-300 shadow-lg whitespace-nowrap">Explore All Team</button>
+                <button class="btn btn-primary bg-slate-950 text-white text-xs font-bold uppercase tracking-wider px-6 py-4 rounded-xl hover:bg-[#E12A2A] hover:text-slate-950 transform hover:-translate-y-0.5 transition duration-300 shadow-lg whitespace-nowrap">Explore All Team</button>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -411,6 +423,30 @@
             duration: 1000,
             once: true,
             offset: 120
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    if (mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px') {
+                        mobileMenu.style.maxHeight = '0px';
+                        if (menuIcon) menuIcon.style.transform = 'rotate(0deg)';
+                    } else {
+                        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                        if (menuIcon) menuIcon.style.transform = 'rotate(90deg)';
+                    }
+                });
+
+                mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+                    mobileMenu.style.maxHeight = '0px';
+                    if (menuIcon) menuIcon.style.transform = 'rotate(0deg)';
+                }));
+            }
         });
     </script>
 </body>
